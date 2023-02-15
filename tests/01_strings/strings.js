@@ -9,6 +9,9 @@ function doesInclude(str, letter) {
 }
 
 function cap(str, letter) {
+  if (!(str.indexOf(letter)+1) || !(str.indexOf(letter) + 2)) {
+    return "sorry not found";
+  }
   const nextlLetter = str.slice(str.indexOf(letter)+1, str.indexOf(letter) + 2);
   const upper = nextlLetter.toUpperCase();
   return upper;
