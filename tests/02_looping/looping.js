@@ -18,20 +18,30 @@ function stringReverse(str) {
 
 // do not use built in slice method.
 function slicer(originalString, startIdx, endIdx) {
-  let first = 0;
-  if (startIdx!=null) {
-    first = startIdx;
-  } 
-  let last = "";
-  if (endIdx!=null) {
-    last = endIdx;
-  } else {
-    last = originalString.length;
+  if (startIdx === undefined) {
+    return originalString;
+  }
+  if (endIdx === undefined) {
+    endIdx = originalString.length;
   }
   let newStr = "";
-  for (let i = first; i < last; i++) {
+  for (let i = startIdx; i < endIdx; i++) {
     newStr = newStr + originalString[i];
   }
+  // let first = 0;
+  // if (startIdx!=null) {
+  //   first = startIdx;
+  // } 
+  // let last = "";
+  // if (endIdx!=null) {
+  //   last = endIdx;
+  // } else {
+  //   last = originalString.length;
+  // }
+  // let newStr = "";
+  // for (let i = startIdx; i < last; i++) {
+  //   newStr = newStr + originalString[i];
+  // }
   return newStr;
 }
 
