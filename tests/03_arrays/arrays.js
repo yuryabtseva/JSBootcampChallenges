@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 function multiply(arr) {
   const flatArr = arr.flat(3);
-  let sum = 1;
+  let total = 1;
   for (i = 0; i< flatArr.length; i++) {
-    sum = sum * flatArr[i];
+    total = total * flatArr[i];
   }
-  return sum;
+  return total;
 }
 
 function includesCopy(arr, searchValue) {
@@ -16,7 +16,8 @@ function inventory(arr) {
   let output = [];
   let sentence = "";
   for (let i = 0; i <arr.length; i++) {
-    sentence = "The " + arr[i][1][0] + " " + arr[i][0] + " is " + arr[i][1][1] + " dollars."
+    // sentence = "The " + arr[i][1][0] + " " + arr[i][0] + " is " + arr[i][1][1] + " dollars."
+    sentence = `The ${arr[i][1][0]} ${arr[i][0]} is ${arr[i][1][1]} dollars.`
     output.push(sentence);
   }
   return output;
@@ -30,7 +31,7 @@ function camelCase(str) {
     if (i===0) {
       output = split[0].toLowerCase();
     } else {
-      capWord = split[i].charAt(0).toUpperCase() + split[i].slice(1);
+      capWord = split[i].charAt(0).toUpperCase() + split[i].slice(1).toLowerCase();
       output += capWord;
     } 
   }
