@@ -21,20 +21,23 @@ function shoppingCart(cart) {
 function compareObjects(obj1, obj2) {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
+
+  const values1 = Object.values(obj1);
+  const values2 = Object.values(obj2);
   
   for (let i = 0; i < keys2.length; i++) {
-    if (!(keys2[i] === keys1[i])) {
+    if (!(keys2[i] === keys1[i]) || !(values2[i] === values1[i])) {
         return false;
     }
   }
-  const values1 = Object.values(obj1);
-  const values2 = Object.values(obj2);
+  // const values1 = Object.values(obj1);
+  // const values2 = Object.values(obj2);
 
-  for (let i = 0; i < values2.length; i++) {
-      if (!(values2[i] === values1[i])) {
-          return false;
-      }
-  }
+  // for (let i = 0; i < values2.length; i++) {
+  //     if (!(values2[i] === values1[i])) {
+  //         return false;
+  //     }
+  // }
 
   return true;
 }
