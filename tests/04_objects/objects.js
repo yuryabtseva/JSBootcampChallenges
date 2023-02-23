@@ -30,14 +30,6 @@ function compareObjects(obj1, obj2) {
         return false;
     }
   }
-  // const values1 = Object.values(obj1);
-  // const values2 = Object.values(obj2);
-
-  // for (let i = 0; i < values2.length; i++) {
-  //     if (!(values2[i] === values1[i])) {
-  //         return false;
-  //     }
-  // }
 
   return true;
 }
